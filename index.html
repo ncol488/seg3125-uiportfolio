@@ -22,61 +22,45 @@
     ></script>
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-md navbar-dark nav-overlay">
-      <div class="container justify-content-center">
+      <div class="container">
         <button
-          class="navbar-toggler"
+          class="navbar-toggler ms-auto"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navmenu"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navmenu"
-        >
-          <ul class="navbar-nav justify-content-center">
-            <!-- Home -->
+
+        <div class="collapse navbar-collapse mobile-bg" id="navmenu">
+          <ul class="navbar-nav w-100 justify-content-center">
             <li class="nav-item">
-              <a href="#Home" class="nav-link red">Home</a>
+              <a href="#hero" class="nav-link red px-md-3">Home</a>
             </li>
+
+            <li class="nav-item d-none d-md-flex align-items-center">
+              <span class="nav-divider red">|</span>
+            </li>
+
             <li class="nav-item">
-              <a
-                href=""
-                style="display: flex; align-items: center; height: 100%"
-                class="red"
-                >|</a
-              >
-            </li>
-            <!-- Featured -->
-            <li class="nav-item pr-3">
-              <a href="#FeaturedProjects" class="nav-link red"
+              <a href="#featuredProjects" class="nav-link red px-md-3"
                 >Featured Projects</a
               >
             </li>
-            <li class="nav-item">
-              <a
-                href=""
-                style="display: flex; align-items: center; height: 100%"
-                class="secondary-red"
-                >|</a
-              >
+            <li class="nav-item d-none d-md-flex align-items-center">
+              <span class="nav-divider secondary-red">|</span>
             </li>
-            <!-- About me -->
+
             <li class="nav-item">
-              <a href="#AboutMe" class="nav-link">About Me</a>
+              <a href="#aboutMe" class="nav-link px-md-3">About Me</a>
             </li>
-            <li class="nav-item">
-              <a
-                href=""
-                style="display: flex; align-items: center; height: 100%"
-                class="secondary-red"
-                >|</a
-              >
+
+            <li class="nav-item d-none d-md-flex align-items-center">
+              <span class="nav-divider secondary-red">|</span>
             </li>
-            <!-- How I Work -->
+
             <li class="nav-item">
-              <a href="#HowIWork" class="nav-link">How I Work</a>
+              <a href="#workflow" class="nav-link px-md-3">How I Work</a>
             </li>
           </ul>
         </div>
@@ -84,21 +68,21 @@
     </nav>
 
     <!-- Hero section -->
-    <div id="hero">
-      <div class="container" style="margin-right: 0">
+    <section class="hero" id="home">
+      <div class="container me-0">
         <div class="row h-100">
-          <div class="col d-flex flex-column pt-5" style="height: 90%">
-            <div class="container" style="padding-top: 10em">
+          <div class="col-12 col-md-6 d-flex flex-column pt-5 h-90">
+            <div class="container" style="padding-top: 10rem">
               <p class="red">✦✦✦</p>
               <h1 class="red">Hello, I'm Lining Ao!</h1>
-              <p class="blue">So glad you're here. Have a treat 🍪</p>
+              <p class="blue bold">So glad you're here. Have a treat 🍪</p>
             </div>
-            <div class="container mt-auto">
+            <div class="container mt-auto px-0">
               <p class="red">
                 I’m a Software engineering student and aspiring UI/UX designer.
               </p>
               <p class="red">
-                <span style="font-weight: bold"
+                <span class="bold"
                   >Welcome to my portfolio, come and take a peek inside my
                   brain!</span
                 >
@@ -108,8 +92,8 @@
             </div>
           </div>
 
-          <div class="col-md-6" style="margin-right: 0">
-            <div class="container rounded-red-container">
+          <div class="d-none d-md-block col-md-6 me-0">
+            <div class="rounded-red-container">
               <p
                 class="secondary-red text-end"
                 style="padding-top: 11.5rem; padding-right: 10rem"
@@ -120,51 +104,140 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Featued Projects -->
-    <section id="featured-projects">
-      <div class="container pt-5 pb-5">
-        <div class="row" style="padding-top: 8em">
-          <div class="col flex-column">
+    <!-- featured Projects -->
+    <section class="featured-projects" id="featuredProjects">
+      <div class="container py-5">
+        <!-- Section Heading -->
+        <div class="row mb-5 py-5">
+          <div class="col-6 col-lg-3 d-flex mb-3 mb-lg-0">
             <div class="sticky-note"></div>
           </div>
-          <div class="col flex-column"><div class="sticky-note"></div></div>
-          <div class="col-md-6">
-            <h1 class="secondary-blue text-end">Featured Projects</h1>
-            <p class="secondary-blue text-end"><br /><br />✦✦✦</p>
+          <div class="col-6 col-lg-3 d-flex mb-3 mb-lg-0">
+            <div class="sticky-note"></div>
+          </div>
+          <div class="col-12 col-lg-6 text-lg-end">
+            <h1 class="secondary-blue">Featured Projects</h1>
+            <p class="secondary-blue">✦✦✦</p>
           </div>
         </div>
-        <div class="row" style="padding-top: 10em; padding-bottom: 5em">
-          <div class="col-md-6">
-            <div
-              class="container"
-              style="margin-left: 0; padding-left: 0; width: 70%"
-            >
+
+        <!-- Project Description + Sticky Notes -->
+        <div class="row gy-5">
+          <!-- Description -->
+          <div class="col-12 col-lg-4 me-5">
+            <div class="text-start text-lg-start">
               <p class="secondary-blue">
-                <span style="font-weight: bold"
-                  >Featured projects from my UI design course and personal
+                <span class="bold">
+                  Featured projects from my UI design course and personal
                   explorations, highlighting design decisions, process, and
-                  growth.</span
-                >
-                <br />
-                <br />
+                  growth. </span
+                ><br /><br />
                 Work in progress: exploring ideas, solving problems, and
                 building better interfaces.
               </p>
-              <p class="secondary-blue text-end"><br /><br />✦✦✦</p>
+              <p class="secondary-blue text-end d-none d-lg-block">✦✦✦</p>
             </div>
           </div>
-          <div class="col flex-column">
+
+          <!-- Sticky Notes -->
+          <div class="col d-flex d-none d-lg-flex d-custom-hide"></div>
+          <div class="col d-flex">
             <div class="sticky-note"></div>
           </div>
-          <div class="col flex-column">
+          <div class="col d-flex">
             <div class="sticky-note"></div>
           </div>
         </div>
-        <!-- row 1 -->
-        <!-- row 2 -->
       </div>
     </section>
+
+    <!-- About me section -->
+    <section id="aboutMe">
+      <div
+        class="aboutMe container d-flex justify-content-center align-items-center pt-5 mt-5"
+      >
+        <div class="card-container secondary-red">
+          <h1>About me</h1>
+          <p class="secondary-red pt-3">✦✦✦</p>
+          <div class="row me-5">
+            <div class="col-md-6 d-flex justify-content-center">
+              <img
+                src="assets/profile-photo.png"
+                width="200px"
+                height="200px"
+              />
+            </div>
+            <div class="col-md-6">
+              <p>
+                <span class="bold">
+                  Based in Ottawa, I’m currently studying Software Engineering
+                  with a passion for creating designs that feel authentic,
+                  thoughtful, and user centred.
+                </span>
+                <br />
+                <br />
+                Outside of tech, I love to fence, play the harp, and journal
+                about everything. All of these are creative outlets that shape
+                the way I think, reflect, and design!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Design Workflow -->
+    <section id="workflow">
+      <div class="container pt-5" style="margin-left: 0">
+        <div class="row">
+          <div
+            class="col-md-8 d-flex flex-column"
+            style="height: 90%; padding-left: 0"
+          >
+            <div class="rounded-blue-container">
+              <div class="container pt-5 pb-5">
+                <div class="col-md-6 secondary-blue pt-5">
+                  <h2 class="pt-5">1. Define</h2>
+                  <p class="pt-5">
+                    I believe the most important part of creating a design is
+                    understanding the heart of the project. A great design
+                    reflects the project’s soul, so I start by defining the user
+                    persona and core goals.
+                  </p>
+                  <h2 class="pt-5">2. Prototype</h2>
+                  <p class="pt-5">
+                    After brainstorming, I bring the persona to life visually. I
+                    experiment with colours, shapes, and layouts that reflect
+                    the persona’s character, exploring these ideas through
+                    sketches and interactive prototypes in Figma.
+                  </p>
+                  <h2 class="pt-5">3. Test & Refine</h2>
+                  <p class="pt-5 pb-5">
+                    With multiple design options in hand, I gather feedback,
+                    conduct usability testing, and iterate through the process
+                    to continually refine and improve the design.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-md-2 d-flex flex-column blue"
+            style="position: relative"
+          >
+            <h1 class="rotated-text d-none d-md-block">My design workflow</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="py-3 px-5 mt-5 text-center secondary-red"
+      style="background-color: #971f1e"
+    >
+      <p class="mb-0 pl-5">© 2025 Lining Ao. All rights reserved.</p>
+    </footer>
   </body>
 </html>
